@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  {% block head %}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}Registration Successful{% endblock %}</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  {% endblock %}
+</head>
+
+<body>
+
+<div class="d-flex justify-content-center align-items-center" style="min-height: 100vh;">
+
+  <div class="form-card p-4 shadow rounded bg-white text-center" style="width: 420px;">
+
+    <!-- Flash Messages -->
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        {% for msg in messages %}
+          <div class="alert alert-success">{{ msg }}</div>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+
+    <h2 class="fw-bold mb-3">Registration Successful 🎉</h2>
+
+    {% if request.args.username %}
+      <p class="lead">Welcome, <strong>{{ request.args.username }}</strong>!</p>
+    {% endif %}
+
+    <p>Your account has been created successfully.</p>
+
+    <a href="{{ url_for('register') }}" class="btn btn-primary w-100 mt-3">
+      Back to Login / Register
+    </a>
+
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
