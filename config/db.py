@@ -45,7 +45,7 @@ def init_db():
     
 
 if __name__ == "__main__":
-    from util.logger import setup_logger
+    from utils.logger import setup_logger
     setup_logger()
     init_db()
     logger.info("Database initialized.")

@@ -147,3 +147,6 @@
 2025-11-14 16:31:09 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2025 16:31:09] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 2025-11-14 16:31:23 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2025 16:31:23] "GET / HTTP/1.1" 200 -
 2025-11-14 16:31:23 - werkzeug - INFO - 127.0.0.1 - - [14/Nov/2025 16:31:23] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-11-14 22:22:58 - utils.logger - INFO - Logger has been set up.
+2025-11-14 22:22:58 - utils.logger - INFO - Users table ensured in database.
+2025-11-14 22:22:58 - utils.logger - INFO - Database initialized.
